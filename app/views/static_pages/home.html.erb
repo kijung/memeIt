@@ -6,4 +6,7 @@
   </h2>
 
   <%= link_to "Sign up now!", new_memer_registration_path, class: "btn btn-lg btn-primary" %>
+<% if current_memer %>
+    <%= button_to "Create Meme", new_meme_path, :class => "button medium", :method => :get %>
+<% end %>
 </div>

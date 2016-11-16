@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   root 'static_pages#home'
   get  '/signup',  to: 'users#new'
   get '/Profile', to: 'memers#memersHome'
+  post '/create', to: 'memes#create', as: 'create'
   resources :users
 end
