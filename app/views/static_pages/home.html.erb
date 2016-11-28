@@ -4,8 +4,9 @@
   <h2>
     Make some cool memes!
   </h2>
-
+<% if current_memer == false %>
   <%= link_to "Sign up now!", new_memer_registration_path, class: "btn btn-lg btn-primary" %>
+<%end%>
 <% if current_memer %>
     <%= button_to "Create Meme", new_meme_path, :class => "button medium", :method => :get %>
 <% end %>

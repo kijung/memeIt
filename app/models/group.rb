@@ -1,3 +1,3 @@
 class Group < ApplicationRecord
-	has_many :memers
+	#has_many :memers
 end
