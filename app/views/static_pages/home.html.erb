@@ -9,5 +9,6 @@
 <%end%>
 <% if current_memer %>
     <%= button_to "Create Meme", new_meme_path, :class => "button medium", :method => :get %>
+    <%= button_to "Create Group", "/makegroup", :class => "button medium", :method => :get %>
 <% end %>
 </div>

@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get  '/signup',  to: 'users#new'
   get '/Profile', to: 'memers#memersHome'
   post '/create', to: 'memes#create', as: 'create'
+  get '/makegroup', to: 'groups#groupsList'
   resources :memers
   resources :memes
   resources :users
