@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161129085207) do
+ActiveRecord::Schema.define(version: 20161129091738) do
 
   create_table "groups", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 20161129085207) do
     t.integer  "Uid"
     t.string   "bottom_text"
     t.string   "top_text"
+    t.integer  "memer_id"
   end
 
   create_table "users", force: :cascade do |t|

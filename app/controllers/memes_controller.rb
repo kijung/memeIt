@@ -10,7 +10,7 @@ class MemesController < ApplicationController
         @new_thing = Meme.new(:name => params[:Name], 
           :top_text => params[:Top_Text], 
           :bottom_text => params[:Bottom_Text], 
-          :Uid => current_memer.id)
+          :memer_id => current_memer.id)
         puts params[:Name]
         #@new_thing.save!
         if !@new_thing.save
@@ -22,7 +22,6 @@ class MemesController < ApplicationController
     end
 
     def new
-      @memer = current_memer
       @meme = Meme.new
     end
 
