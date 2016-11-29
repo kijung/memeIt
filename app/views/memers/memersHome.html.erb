@@ -1,8 +1,9 @@
+<%= Memer %>
+<h3>Email: <%= current_memer.email if current_memer %></h3>
+<h3>Memes:
 	<%
-	@trainer.pokemons.each do |memes| %>
-		<%= meme.name%>
-		<%= button_to "Delete", delete_path(id: meme), :class => "button medium", :method => :delete %>	
-	<%end %>
-	
-<%= image_tag "1.jpg" %>
-<%= image_tag "2.jpg" %>
+		Memer.find_by_id(1).memes.each do |meme| %>
+			<%= meme.name %>
+			<%= meme.top_text %>
+			<%= meme.bottom_text %>
+		<%end%>
