@@ -1,8 +1,8 @@
-<%= Memer %>
-<h3>Email: <%= current_memer.email if current_memer %></h3>
-<h3>Memes:
+<h1 style="margin-top:1.35em">Memer</h1>
+<h1>Email: <%= current_memer.email if current_memer %></h1>
+<h1>Memes:
 	<%
-		Memer.find_by_id(1).memes.each do |meme| %>
+		current_memer.memes.each do |meme| %>
 			<%= meme.name %>
 			<%= meme.top_text %>
 			<%= meme.bottom_text %>

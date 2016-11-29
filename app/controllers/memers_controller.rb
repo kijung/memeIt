@@ -9,6 +9,10 @@ class MemersController < ApplicationController
  end
 
  def show
-   @current_memer = current_memer
+   @current_memer = Memer.find_by_id(1)
+ end
+
+ def index
+   @current_memer = Memer.all
  end
 end
