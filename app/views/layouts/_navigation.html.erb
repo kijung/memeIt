@@ -6,8 +6,14 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
 
-      <troll class="one"> Meme It</troll>
-      <%= image_tag "Trollface.jpg" %>
+      <div class="imageBox">
+          <div class="imageInn">
+             <%= link_to "Meme It", '/', id: "logo" %>
+          </div>
+          <div class="hoverImg">
+              <%= image_tag "Trollface.jpg" %>
+          </div>
+      </div>
 
     <nav>
       <ul class="nav navbar-nav navbar-right">
