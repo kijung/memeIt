@@ -1,4 +1,4 @@
 class Meme < ApplicationRecord
-	belongs_to :memer
-	belongs_to :group
+	belongs_to :memer, optional: true
+	belongs_to :group, optional: true
 end
