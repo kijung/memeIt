@@ -1,0 +1,13 @@
+<h3>Memers</h3>
+<h2>Memers </h2>
+<p>Name: <%= @memer.name if @memer.name %></p>
+<p>Email: <%= @memer.email if @memer.email %></p>
+<p>Memer: 
+<%
+    @memer.memes.each do |meme| %>
+    	<%= meme.name %>
+    	<%= "\n" %>
+
+    <%end%>
+
+</p>

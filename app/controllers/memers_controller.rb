@@ -10,6 +10,7 @@ class MemersController < ApplicationController
 
  def show
    @current_memer = Memer.find_by_id(1)
+   @memer = Memer.find(params[:id])
  end
 
  def index

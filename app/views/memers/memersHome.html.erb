@@ -1,5 +1,6 @@
 <h1 style="margin-top:1.35em">Memer</h1>
 <h1>Email: <%= current_memer.email if current_memer %></h1>
+<h1> <%= current_memer.memes %> </h1>
 <h1>Memes:
 	<%
 		current_memer.memes.each do |meme| %>
@@ -7,3 +8,5 @@
 			<%= meme.top_text %>
 			<%= meme.bottom_text %>
 		<%end%>
+</h1>
+

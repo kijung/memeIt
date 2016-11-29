@@ -1,20 +1,32 @@
 class MemesController < ApplicationController
     protect_from_forgery :except => :create
     def create
-        @new_thing = Meme.new()
-        @new_thing.name = params[:name]
-        @new_thing.top_text = params[:Top_Text]
-        @new_thing.bottom_text = params[:Bottom_Text]
-        @new_thing.Uid = Memer.find_by_id(1).id
+
+        #@new_thing = Meme.new()
+        #@new_thing.name = params[:name]
+        #@new_thing.top_text = params[:Top_Text]
+        #@new_thing.bottom_text = params[:Bottom_Text]
+        #@new_thing.Uid = current_memer.id
+        @new_thing = Meme.new(:name => params[:Name], 
+          :top_text => params[:Top_Text], 
+          :bottom_text => params[:Bottom_Text], 
+          :Uid => current_memer.id)
+        puts params[:Name]
+        #@new_thing.save!
         if !@new_thing.save
           flash[:error] = @new_thing.errors.full_messages.to_sentence
           redirect_to '/'
         else
-          redirect_to '/Profile'
+          redirect_to memer_path(:id => current_memer.id)
         end
     end
 
     def new
+      @memer = current_memer
       @meme = Meme.new
+    end
+
+    def help
+
     end
 end
