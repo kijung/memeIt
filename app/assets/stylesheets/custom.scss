@@ -87,20 +87,43 @@ input {
 }
 /* header */
 
-#logo {
+logo {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: black;
+  color: white;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
-  &:hover {
-    color: white
-  }
+  // &:hover{
+  //   content: url(image/Trollface.jpg);
+  //   display: block;
+  //   position: absolute;
+  //   }
 }
 
+troll {
+    float: left;
+    margin-right: 10px;
+    font-size: 1.7em;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    padding-top: 9px;
+    font-weight: bold;
+    &:hover{
+      display: none;
+      }
+}
+
+img{
+   display: none
+}
+
+troll.one:hover + img{
+   display: block;
+}
 /* footer */
 
 footer {
