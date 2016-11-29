@@ -31,6 +31,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 gem 'devise'
 
+gem 'haml'
+
 gem 'bcrypt'
 gem 'bootstrap-sass', '3.2.0.2'
 group :development, :test do

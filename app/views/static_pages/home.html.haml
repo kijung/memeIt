@@ -1,0 +1,9 @@
+.center.jumbotron
+  %h1 Welcome to Meme It
+  %h2
+    Make some cool memes!
+  - if current_memer == false
+    = link_to "Sign up now!", new_memer_registration_path, class: "btn btn-lg btn-primary"
+  - if current_memer
+    = button_to "Create Meme", new_meme_path, :class => "button medium", :method => :get
+    = button_to "Create Group", "/makegroup", :class => "button medium", :method => :get

@@ -1,0 +1,9 @@
+%h1{:style => "margin-top:1.35em"} Meme Generator
+%form{:action => "/create", :method => "POST"}
+  %label Name
+  %input{:name => "Name", :type => "text"}/
+  %label Top Text
+  %input{:name => "Top_Text", :type => "text"}/
+  %label Bottom Text
+  %input{:name => "Bottom_Text", :type => "text"}/
+  %button{:type => "submit"} Generate Meme
