@@ -22,6 +22,6 @@ Features:
 
 Division of Labor:
 ● Jordan: handled devise, create meme and memer model, some routing, and styling
-● Kijung: made navigation bar
-● Caleb: create group model
-● Edward:
+● Kijung: made navigation bar, memer controller, worked on memers model, carrierwave gem
+● Caleb: create group model, relationship b/w memes and memers, relationship b/w memes and groups
+● Edward: integrating picture into model, haml gem, 
