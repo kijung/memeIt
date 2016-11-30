@@ -1,11 +1,21 @@
 <h1 style="margin-top:1.35em">Meme Generator</h1>
 
 <form action="/create" method="POST">
-  <label>Name</label>
+  <label>Text</label>
   <input name= "Name" type="text"></input>
-  <label>Top Text</label>
-  <input name= "Top_Text" type="text"></input>
-  <label>Bottom Text</label>
-  <input name= "Bottom_Text" type="text"></input>
+  <!-- <label>Top Text</label> -->
+  <!-- <input name= "Top_Text" type="text"></input> -->
+  <!-- <label>Bottom Text</label> -->
+  <!-- <input name= "Bottom_Text" type="text"></input> -->
   <button type="submit">Generate Meme</button>
+  <input name= "picture" type = "file"></input>
+  <%= link_to root_path do %>
+        <%= image_tag("1.jpg", size: "100x100") %>
+     <% end %>
+
+    <%= link_to image_tag("2.jpg", size: "100x100", alt: "Edit Entry") %>
+    <%= link_to image_tag("awkpenguin.jpg",size: "100x100", alt: "Edit Entry") %>
+    <%= link_to image_tag("babyyes.jpg", size: "100x100", alt: "Edit Entry") %>
+    <%= link_to image_tag("onedoesnot.jpg", size: "100x100", alt: "Edit Entry") %>
+
 </form>
